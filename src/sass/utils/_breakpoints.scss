@@ -1,0 +1,69 @@
+$index: calc(1vw + 1vh); // index for viewport aspect ratio
+$side: 3;
+
+
+$pre-mobile: 479px;
+$mobile: 480px;
+$max-mobile: 767.98px;
+
+$tablet: 768px;
+$max-tablet: 991.98px;
+
+$laptop: 1199.98px;
+$desktop: 1200px;
+
+
+
+@mixin pre-mobile {
+    @media screen and (max-width: 479.98px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin min-max-mobile {
+    @media (min-width: 480px) and (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin max-mobile {
+    @media screen and (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin max-tablet {
+    @media screen and (max-width: 991.98px) {
+        @content;
+    }
+}
+
+@mixin max-tablet-laptop {
+    @media (min-width: 991.98px) and (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin desktop-xxlg {
+    @media screen and (min-width: 2438px) {
+        @content;
+    }
+}
