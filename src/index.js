@@ -4,6 +4,7 @@ import Swiper, { Pagination, EffectFade } from 'swiper';
 const mainSlider = document.querySelector('.main-slider');
 
 function windowLoad() {
+  document.body.classList.add('loaded');
   if (mainSlider) {
     new Swiper('.main-slider', {
       modules: [Pagination, EffectFade],
