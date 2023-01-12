@@ -148,3 +148,9 @@
 .bullets__items .swiper-pagination-bullet-active {
     opacity: 1;
 }
+
+@include max-mobile {
+    .bullets__items {
+        justify-content: center;
+    }
+}
