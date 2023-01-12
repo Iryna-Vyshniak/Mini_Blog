@@ -1,0 +1,46 @@
+.footer {
+    width: 100%;
+    height: $header-height;
+    padding: 1.875rem 0;
+    background: rgba(52, 58, 64, 1);
+
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.9375rem;
+
+        font-size: .875rem;
+        line-height: 1.2;
+    }
+
+
+    &__text {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        color: #E5E5E5;
+        font-weight: 700;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border: none;
+        outline: none;
+
+        color: #E5E5E5;
+        font-weight: 400;
+        text-align: center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+    }
+}
