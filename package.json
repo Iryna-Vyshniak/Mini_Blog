@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "homepage": "https://Iryna-Vyshniak.github.io/minimal_blog",
   "scripts": {
-    "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "start": "parcel src/*.html -p 1177 --open",
+    "build": "parcel build src/*.html --public-url /minimal_blog/"
   },
   "repository": {
     "type": "git",
