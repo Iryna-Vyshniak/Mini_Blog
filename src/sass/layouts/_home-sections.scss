@@ -1,0 +1,150 @@
+.home__sections {
+    display: grid;
+    gap: 100px;
+}
+
+// .home__main-slider {}
+@include max-tablet {
+    .home__sections {
+        gap: 70px;
+    }
+}
+
+@include max-mobile {
+    .home__sections {
+        gap: 40px;
+    }
+}
+
+
+.main-slider {
+    min-width: 0;
+
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__slide {
+        position: relative;
+        flex-shrink: 0;
+        overflow: hidden;
+        background-color: #343A40;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 2;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        min-height: 100vh;
+        gap: .9375rem;
+        padding-top: 6.25rem;
+        padding-bottom: 8.75rem;
+    }
+}
+
+// .swiper {}
+
+// .swiper-wrapper {}
+
+// .swiper-slide {}
+
+.category {
+    display: inline-block;
+    padding: .3125rem .625rem;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+    text-shadow: 0.0313rem .5008px 0.0625rem rgb(54, 54, 54),
+        -0.0313rem -0.0313rem 0.0625rem rgb(255, 255, 255);
+    border-radius: .5rem;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: .625rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: all 300ms;
+}
+
+.category:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.main-slider__title {
+    max-width: 33.125rem;
+}
+
+.main-slider__body {
+    display: flex;
+    align-items: baseline;
+    gap: 11px;
+    color: #E5E5E5;
+}
+
+.main-slider__body--dark-blue {
+    color: #011d45;
+}
+
+.main-slider__date {
+    display: flex;
+    align-items: center;
+    gap: .687rem;
+    line-height: 1.25;
+
+    &::after {
+        content: '';
+        width: 30px;
+        height: 1px;
+        background-color: currentColor;
+    }
+}
+
+.text {
+    max-width: 26.25rem;
+}
+
+.bullets {
+    position: relative;
+    z-index: 2;
+    margin-top: -8.75rem;
+}
+
+// .bullets__container {}
+
+.bullets__items {
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+    height: 8.75rem;
+}
+
+.bullets__items .swiper-pagination-bullet {
+    flex: 0 0 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255);
+    opacity: 0.2;
+    transition: opacity 300ms;
+    cursor: pointer;
+
+}
+
+.bullets__items .swiper-pagination-bullet-active {
+    opacity: 1;
+}

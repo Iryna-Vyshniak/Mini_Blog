@@ -15,8 +15,6 @@ body {
     align-items: center;
     min-height: 100vh;
     overflow: clip;
-
-    outline: 2px dotted rgb(0, 21, 255);
 }
 
 [class*="__container"] {
@@ -24,8 +22,6 @@ body {
     padding-left: .9375rem;
     padding-right: .9375rem;
     max-width: 83.125rem;
-
-    outline: 2px dotted red;
 }
 
 ul {
@@ -38,4 +34,22 @@ a {
 
 main {
     flex: 1 1 auto;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.875rem;
+
+    color: #FFFFFF;
+    text-shadow: 0.0313rem .5008px 0.0625rem rgb(54, 54, 54),
+        -0.0313rem -0.0313rem 0.0625rem rgb(255, 255, 255);
+}
+
+.text {
+    font-weight: 400;
+    font-size: .75rem;
+    line-height: 1.67;
+    text-shadow: 0.0313rem .5008px 0.0625rem rgb(54, 54, 54),
+        -0.0313rem -0.0313rem 0.0625rem rgb(255, 255, 255);
 }
