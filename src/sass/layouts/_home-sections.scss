@@ -154,3 +154,33 @@
         justify-content: center;
     }
 }
+
+.main-slider__category,
+.main-slider__title,
+.main-slider__body {
+    transform: translate(0px, 3.125rem);
+    opacity: 0;
+    transition: all 0.8s;
+
+}
+
+.loaded .main-slider__category {
+    transition-delay: 0.5s;
+}
+
+.loaded .main-slider__title {
+    transition-delay: 0.7s;
+}
+
+.loaded .main-slider__body {
+    transition-delay: 0.9s;
+}
+
+.loaded .main-slider__category,
+.loaded .main-slider__title,
+.loaded .main-slider__body {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: all 0.8s;
+
+}

@@ -1,0 +1,144 @@
+.popular {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        margin-bottom: 45px;
+
+        color: #495057;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+        column-gap: 1.25rem;
+        row-gap: 3.125rem;
+    }
+}
+
+.popular__tab {
+    display: none;
+}
+
+.popular__tab.active {
+    display: block;
+}
+
+.nav-popular {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: .3125rem;
+    column-gap: 1.25rem;
+}
+
+.nav-popular__item {
+    position: relative;
+    font-weight: 700;
+    line-height: 1.39;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: .125rem;
+        background-color: #D4A373;
+
+    }
+
+    &.active::after,
+    &:hover::after {
+        width: 100%;
+        left: 0;
+        transition: all 0.3s;
+    }
+}
+
+.item-popular {
+    position: relative;
+    display: grid;
+    align-content: start;
+    gap: 15px;
+
+    &__category {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
+    }
+
+    &__image {
+        position: relative;
+        overflow: hidden;
+
+        border-radius: 5px;
+        padding-bottom: 90.32%;
+    }
+}
+
+.item-popular__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.8s;
+}
+
+.item-popular__image:hover img {
+    transform: scale(1.05);
+}
+
+.item-popular__date {
+    color: #6C757D;
+
+    font-weight: 400;
+    font-size: .75rem;
+    line-height: 1.38;
+}
+
+.item-popular__title {
+    margin: 0;
+}
+
+.item-popular__link-title {
+    font-size: 1.125rem;
+    line-height: 1.25;
+    color: #495057;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.item-popular__text {
+    color: #6C757D;
+    margin-bottom: 0;
+}
+
+.text-popular {
+    text-shadow: none;
+}
+
+@include max-mobile {
+    .popular__header {
+        flex-direction: column;
+        margin-bottom: 1.5625rem;
+    }
+
+    .popular__items {
+        row-gap: 1.875rem;
+    }
+
+}
