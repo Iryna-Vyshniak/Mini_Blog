@@ -127,10 +127,6 @@
     margin-bottom: 0;
 }
 
-.text-popular {
-    text-shadow: none;
-}
-
 @include max-mobile {
     .popular__header {
         flex-direction: column;
