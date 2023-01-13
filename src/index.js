@@ -1,6 +1,7 @@
 // import Swiper JS
 import Swiper, { Pagination, EffectFade } from 'swiper';
 
+// for slider
 const mainSlider = document.querySelector('.main-slider');
 
 function windowLoad() {
@@ -26,7 +27,7 @@ function windowLoad() {
     });
   }
 }
-
+// for tabs
 window.addEventListener('load', windowLoad);
 
 document.addEventListener('click', documentActions);
@@ -48,6 +49,35 @@ function documentActions(e) {
       tabItems[getIndex(tabNavItem)].classList.add('active');
     }
   }
+
+  // UP
+  if (targetElement.closest('.footer__button')) {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    e.preventDefault();
+  }
 }
 
 const getIndex = el => [...el.parentNode.children].indexOf(el);
+
+// for watcher
+const items = document.querySelectorAll('[data-item]');
+const options = {
+  threshold: 0.2,
+};
+
+const callback = entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+};
+
+const observer = new IntersectionObserver(callback, options);
+
+items.forEach(item => {
+  observer.observe(item);
+});
