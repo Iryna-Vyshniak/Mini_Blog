@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://Iryna-Vyshniak.github.io/minimal_blog",
+  "homepage": "https://Iryna-Vyshniak.github.io/Mini_Blog",
   "scripts": {
     "start": "parcel src/*.html -p 1177 --open",
-    "build": "parcel build src/*.html --public-url /minimal_blog/"
+    "build": "parcel build src/*.html --public-url /Mini_Blog/"
   },
   "repository": {
     "type": "git",
