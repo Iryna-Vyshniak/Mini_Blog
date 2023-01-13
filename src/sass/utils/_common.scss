@@ -61,3 +61,14 @@ main {
     text-shadow: 0.0313rem .5008px 0.0625rem rgb(54, 54, 54),
         -0.0313rem -0.0313rem 0.0625rem rgb(255, 255, 255);
 }
+
+[data-item] {
+    transform: translate(0px, 3.125rem);
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+[data-item].active {
+    transform: translate(0, 0);
+    opacity: 1;
+}
