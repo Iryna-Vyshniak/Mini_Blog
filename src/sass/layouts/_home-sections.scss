@@ -1,17 +1,22 @@
-.home__sections {
+.home__sections,
+.article__sections {
     display: grid;
     gap: 100px;
 }
 
 // .home__main-slider {}
 @include max-tablet {
-    .home__sections {
+
+    .home__sections,
+    .article__sections {
         gap: 70px;
     }
 }
 
 @include max-mobile {
-    .home__sections {
+
+    .home__sections,
+    .article__sections {
         gap: 40px;
     }
 }
