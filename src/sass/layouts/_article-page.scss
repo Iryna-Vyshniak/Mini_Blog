@@ -1,0 +1,159 @@
+// ------------------------------------
+.article {
+    &__content {
+        margin: 0;
+        padding: 6.25rem 0;
+    }
+
+    &__container {
+        display: grid;
+        align-items: start;
+        gap: 1.25rem;
+        grid-template-columns: 12.5rem 1fr 12.5rem;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: .4375rem;
+        font-size: 12px;
+        line-height: 2;
+        font-weight: 700;
+    }
+
+    &__body {
+        display: grid;
+        gap: 50px;
+    }
+
+    &__text {
+        display: grid;
+        gap: 30px;
+        line-height: 2;
+        text-align: justify;
+    }
+}
+
+.article__date {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+
+    &::after {
+        content: '';
+        width: 35px;
+        height: 1px;
+        background: #C4C4C4;
+    }
+}
+
+.article__text blockquote {
+    margin: 0;
+    color: #D59F52;
+    font-size: 2.25rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-shadow: .0313rem .5008px .0625rem rgb(54, 54, 54),
+        -0.0313rem -0.0313rem .0625rem rgb(255, 255, 255);
+
+}
+
+.article__tags {
+    display: flex;
+    gap: .75rem;
+    padding-bottom: 3.125rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border-bottom: .0313rem solid #C4C4C4;
+
+}
+
+.article__tag {
+    color: #6C757D;
+    border: .0625rem solid #E5E5E5;
+    border-radius: 5px;
+    text-shadow: none;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+    }
+
+    &:active {
+        box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+    }
+}
+
+.author {
+    display: flex;
+    gap: 1.0625rem;
+
+    &__avatar {
+        flex: 0 0 3.125rem;
+        height: 3.125rem;
+        width: 3.125rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__title {
+        font-weight: 700;
+        color: #495057;
+    }
+
+    &__skills {
+        color: #6C757D;
+    }
+}
+
+.author__body {
+    display: grid;
+    align-items: center;
+    gap: .5rem;
+    font-size: .75rem;
+    line-height: 1.67;
+}
+
+
+// -------------------------------------
+.article__related {
+    background: rgba(229, 229, 229, 0.3);
+}
+
+@include max-tablet {
+    .article__content {
+        padding: 4.375rem 0;
+    }
+
+    .article__container {
+        grid-template-columns: 12.5rem 1fr;
+    }
+
+    .article__body {
+        gap: 30px;
+    }
+
+    .article__tags {
+        padding-bottom: 30px;
+    }
+
+    .article__text {
+        gap: .9375rem;
+    }
+
+    .article__text blockquote {
+        flex: 1.5625rem;
+    }
+}
+
+@include max-mobile {
+    .article__content {
+        padding: 2.5rem 0;
+    }
+
+    .article__container {
+        grid-template-columns: auto;
+    }
+}
