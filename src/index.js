@@ -81,3 +81,13 @@ const observer = new IntersectionObserver(callback, options);
 items.forEach(item => {
   observer.observe(item);
 });
+
+// header
+// Sets the nav and menuBtn.
+const nav = document.querySelector('.header__menu');
+const menuBtn = document.querySelector('.header__menu-btn');
+// Add click event listener to the menu. Toggle the active and active state of the menu.
+menuBtn.addEventListener('click', () => {
+  menuBtn.classList.toggle('active');
+  nav.classList.toggle('active');
+});
