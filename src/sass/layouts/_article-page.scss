@@ -74,7 +74,7 @@
     border-radius: 5px;
     text-shadow: none;
     box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
-    transition: all 0.2s ease-in-out;
+    transition: all 300ms ease-in-out;
     cursor: pointer;
 
     &:hover {
@@ -145,6 +145,7 @@
 
     .article__text blockquote {
         flex: 1.5625rem;
+        text-align: center;
     }
 }
 
@@ -155,5 +156,9 @@
 
     .article__container {
         grid-template-columns: auto;
+    }
+
+    .article__text blockquote {
+        text-align: center;
     }
 }
