@@ -83,7 +83,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
-        transition: all 0.8s;
+        transition: all 300ms ease-in-out;
         opacity: 0.5;
     }
 }
