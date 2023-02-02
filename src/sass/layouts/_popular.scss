@@ -9,11 +9,60 @@
         color: #495057;
     }
 
-    &__items {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
-        column-gap: 1.25rem;
-        row-gap: 3.125rem;
+
+}
+
+.popular__nav {
+    transition: all 300ms ease-in-out;
+
+    &:hover .nav-popular__item {
+        filter: blur(.5px);
+        opacity: .9;
+        transform: scale(.98);
+        box-shadow: none;
+    }
+
+    &:hover .nav-popular__item:hover {
+        padding: 5px;
+        border-radius: 5px;
+        transform: scale(1.2);
+        filter: blur(0px);
+        opacity: 1;
+        box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+        background: rgba(229, 226, 245, .3);
+        box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+    }
+}
+
+.nav-popular__item {
+    transition: all 300ms ease-in-out;
+
+    &:active {
+        box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+    }
+}
+
+.popular__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+    column-gap: 1.25rem;
+    row-gap: 3.125rem;
+    transition: all 300ms ease-in-out;
+
+    &:hover .popular__item {
+        filter: blur(1px);
+        opacity: .9;
+        transform: scale(.98);
+        box-shadow: none;
+    }
+
+    &:hover .popular__item:hover {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+        box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+        background: rgba(229, 226, 245, .5);
+        color: white;
     }
 }
 
@@ -57,7 +106,8 @@
     &:hover::after {
         width: 100%;
         left: 0;
-        transition: all 0.3s;
+        transition: all 300ms ease-in-out;
+        ;
     }
 }
 
@@ -106,7 +156,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.8s;
+    transition: transform 300ms ease-in-out;
 }
 
 .item-popular__image:hover img {
