@@ -10,6 +10,10 @@
     .article__sections {
         gap: 70px;
     }
+
+    .main-slider__body {
+        display: block;
+    }
 }
 
 @include max-mobile {
@@ -103,7 +107,8 @@
     font-size: .625rem;
     line-height: 1.2;
     text-transform: uppercase;
-    transition: all 300ms;
+    transition: all 300ms ease-in-out;
+    ;
 }
 
 .category:hover {
@@ -112,13 +117,24 @@
 
 .main-slider__title {
     max-width: 33.125rem;
+    text-align: left;
+
+    @include pre-mobile {
+        font-size: calc(2vw + 2vh);
+        text-align: center;
+    }
+
 }
 
 .main-slider__body {
-    display: flex;
-    align-items: baseline;
-    gap: 11px;
-    color: #E5E5E5;
+    display: none;
+
+    @include mobile {
+        display: flex;
+        align-items: baseline;
+        gap: 11px;
+        color: #E5E5E5;
+    }
 }
 
 .main-slider__date {
@@ -158,7 +174,8 @@
     border-radius: 50%;
     background: rgba(255, 255, 255);
     opacity: 0.2;
-    transition: opacity 300ms;
+    transition: opacity 300ms ease-in-out;
+    ;
     cursor: pointer;
 
 }
@@ -178,7 +195,7 @@
 .main-slider__body {
     transform: translate(0px, 3.125rem);
     opacity: 0;
-    transition: all 0.8s;
+    transition: all 300ms ease-in-out;
 
 }
 
@@ -200,11 +217,18 @@
 .loaded .main-slider__body {
     transform: translate(0, 0);
     opacity: 1;
-    transition: all 0.8s;
+    transition: all 300ms ease-in-out;
 
 }
 
-.main-video {
+// .main-video {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     object-position: center;
+// }
+
+.main-slider__bg {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -222,25 +246,39 @@
     display: flex;
     flex-direction: column;
 
-    transition: 0.5s ease-in-out;
-
+    transition: all 300ms ease-in-out;
 }
 
 .main-slider__main-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+
+    backdrop-filter: blur(5px);
     color: #fff;
     filter: drop-shadow(0.0313rem 1px 0.0625rem rgb(14, 14, 14));
 
     font-size: 1.4em;
-    transition: 0.5s ease-in-out;
+    transition: all 300ms ease-in-out;
 
     &:not(:last-child) {
         margin-bottom: 16px;
+
+        @include pre-mobile {
+            margin-bottom: 5px;
+        }
+
+    }
+
+    &:hover {
+        transform: scale(1.02);
     }
 }
 
-a:hover > i .fa-brands {
-    transform: scale(1.1);
-}
 
 @include max-tablet-laptop {
     .main-slider__main-icons {
