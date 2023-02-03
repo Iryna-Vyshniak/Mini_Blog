@@ -15,22 +15,20 @@
 .popular__nav {
     transition: all 300ms ease-in-out;
 
+    &:focus .nav-popular__item,
     &:hover .nav-popular__item {
-        filter: blur(.5px);
-        opacity: .9;
         transform: scale(.98);
         box-shadow: none;
     }
 
+    &:focus .nav-popular__item:focus,
     &:hover .nav-popular__item:hover {
         padding: 5px;
         border-radius: 5px;
         transform: scale(1.2);
-        filter: blur(0px);
-        opacity: 1;
         box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
-        background: rgba(229, 226, 245, .3);
-        box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+        background: rgba(249, 248, 255, 0.3);
+        box-shadow: -2px -2px 5px #fff, 2px 2px 5px #cdd0df;
     }
 }
 
@@ -38,7 +36,9 @@
     transition: all 300ms ease-in-out;
 
     &:active {
-        box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+        position: relative;
+        top: 1.5px;
+        box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff, 0 -1px 1px #495057;
     }
 }
 
@@ -49,20 +49,25 @@
     row-gap: 3.125rem;
     transition: all 300ms ease-in-out;
 
+    // & > article:nth-child(5) {
+    //     grid-column: span 2;
+    // }
+
+    // article:nth-last-child(2) {
+    //     grid-column: span 2;
+    // }
+
+    &:focus .popular__item,
     &:hover .popular__item {
-        filter: blur(1px);
-        opacity: .9;
         transform: scale(.98);
         box-shadow: none;
     }
 
+    &:focus .popular__item:focus,
     &:hover .popular__item:hover {
         transform: scale(1);
-        filter: blur(0px);
-        opacity: 1;
         box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
-        background: rgba(229, 226, 245, .5);
-        color: white;
+        background: rgba(241, 239, 253, 0.5);
     }
 }
 
@@ -114,8 +119,15 @@
 .item-popular {
     position: relative;
     display: grid;
-    align-content: start;
-    gap: 15px;
+    grid-auto-flow: row dense;
+    grid-auto-columns: 1fr;
+    gap: 10px;
+    // place-items: stretch stretch;
+    justify-items: stretch;
+    align-items: stretch;
+
+
+
 
     &__category {
         position: absolute;
@@ -179,9 +191,11 @@
     font-size: 1.125rem;
     line-height: 1.25;
     color: #495057;
+    transition: all 300ms ease-in-out;
 
     &:hover {
         text-decoration: underline;
+        text-shadow: 1px 0.3px 1px rgb(255, 255, 255), -1px -0.3px 1px rgb(255, 255, 255);
     }
 }
 
