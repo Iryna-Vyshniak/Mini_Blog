@@ -21,7 +21,28 @@
   <body>
     <div class="wrapper">
       <!-- ❗️❗️❗️ Add partials like so for every page -->
-      <include src="./partials/header.html"></include>
+      <header class="header">
+  <div class="header__container">
+     <!-- logo -->
+    <div class="header__logo-wrapper">
+         <a class="header__logo link" href="./index.html" lang="en">
+          <img src="./images/logo.svg" alt="logo" widh="68" height="22"></img>
+      </a>
+    </div>
+    <div class="header__menu-btn"></div>
+     <!-- menu -->
+    <nav class="header__menu menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="./index.html" class="menu__link active">Home</a></li>
+        <li class="menu__item"><a href="./about.html" class="menu__link">About</a></li>
+        <li class="menu__item"><a href="./article.html" class="menu__link">Article</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Gallery</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
       <main class="home">
         <include src="./partials/home-sections.html"></include>
       </main>
