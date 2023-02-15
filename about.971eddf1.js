@@ -1,0 +1,2 @@
+window.onload=function(){const e=document.querySelector(".about");if(e){document.querySelector(".hero-about__container");const t=document.querySelector(".parallax__img"),o=40,n=.05;let a=0,r=0,c=0,s=0;!function e(){a+=(c-a)*n,r+=(s-r)*n,t.style.cssText=`transform: translate(${a/o}%,${r/o}%);`,requestAnimationFrame(e)}(),e.addEventListener("mousemove",(function(t){const o=e.offsetWidth,n=e.offsetHeight,a=t.pageX-o/2,r=t.pageY-n/2;c=a/o*100,s=r/n*100}))}};
+//# sourceMappingURL=about.971eddf1.js.map
