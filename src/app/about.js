@@ -34,5 +34,19 @@ window.onload = function () {
     }
 
     setMouseParallaxStyle();
+
+    parallax.addEventListener('mousemove', function (e) {
+      // Получение ширины и высоты блока
+      const parallaxWidth = parallax.offsetWidth;
+      const parallaxHeight = parallax.offsetHeight;
+
+      // Ноль по середине
+      const coordX = e.pageX - parallaxWidth / 2;
+      const coordY = e.pageY - parallaxHeight / 2;
+
+      // Получаем проценты
+      coordXprocent = (coordX / parallaxWidth) * 100;
+      coordYprocent = (coordY / parallaxHeight) * 100;
+    });
   }
 };
