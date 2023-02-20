@@ -41,6 +41,19 @@ main {
     flex: 1 1 auto;
 }
 
+.vissually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
 .title {
     font-weight: 700;
     font-size: 2.25rem;
