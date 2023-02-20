@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "modern-normalize": "^1.1.0",
+    "simplelightbox": "^2.12.1",
     "swiper": "^8.4.5"
   },
   "devDependencies": {
